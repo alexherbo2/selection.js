@@ -1,0 +1,9 @@
+/* Dracula theme – https://draculatheme.com */
+
+.primary-selection {
+  outline: hsl(326, 100%, 74%) solid medium !important; /* Pink */
+}
+
+.secondary-selection {
+  outline: hsl(265, 89%, 78%) dotted thin !important; /* Purple */
+}
