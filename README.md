@@ -2,6 +2,8 @@
 
 > Multiple selections, inspired by [Kakoune].
 
+[![Selection demo](https://img.youtube.com/vi_webp/KIsOSIQXAVU/maxresdefault.webp)](https://youtu.be/KIsOSIQXAVU)
+
 ## Usage
 
 On <https://kakoune.org>:
