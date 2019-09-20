@@ -17,6 +17,9 @@ class SelectionList {
   get length() {
     return this.collection.length
   }
+  includes(element) {
+    return this.collection.includes(element)
+  }
   set(collection = this.collection, main = collection.length - 1) {
     this.clear()
     this.main = main >= 0 && main <= collection.length - 1
