@@ -7,3 +7,7 @@
 .secondary-selection {
   outline: hsl(265, 89%, 78%) dotted thin !important; /* Purple */
 }
+
+:root.primary-selection {
+  border: thin solid hsl(326, 100%, 74%) !important; /* Pink */
+}
