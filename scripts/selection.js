@@ -17,6 +17,9 @@ class SelectionList {
   get length() {
     return this.collection.length
   }
+  map(callback) {
+    return this.collection.map(callback)
+  }
   includes(element) {
     return this.collection.includes(element)
   }
