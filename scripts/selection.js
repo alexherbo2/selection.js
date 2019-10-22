@@ -17,6 +17,9 @@ class SelectionList {
   get length() {
     return this.collection.length
   }
+  get mainSelection() {
+    return this.collection[this.main]
+  }
   map(callback) {
     return this.collection.map(callback)
   }
@@ -41,7 +44,7 @@ class SelectionList {
     this.set(collection, main)
   }
   remove(...elements) {
-    const collection = Object.assign([this.collection[this.main]], elements)
+    const collection = Object.assign([this.mainSelection], elements)
     this.filter((candidate) => collection.includes(candidate) === false)
   }
   filter(callback) {
@@ -95,7 +98,7 @@ class SelectionList {
     }
     this.set(collection, main)
   }
-  focus(element = this.collection[this.main]) {
+  focus(element = this.mainSelection) {
     if (this.length === 0) {
       return
     }
@@ -104,7 +107,7 @@ class SelectionList {
       return
     }
     if (main !== this.main) {
-      const secondary = this.collection[this.main]
+      const secondary = this.mainSelection
       secondary.classList.remove('primary-selection')
       secondary.classList.add('secondary-selection')
       element.classList.remove('secondary-selection')
@@ -125,7 +128,7 @@ class SelectionList {
     if (this.length <= 1) {
       return
     }
-    const main = this.collection[this.main]
+    const main = this.mainSelection
     this.collection.sort(SelectionList.compare)
     this.main = this.collection.indexOf(main)
   }
@@ -155,7 +158,7 @@ class SelectionList {
     if (this.length === 0) {
       return
     }
-    this.collection[this.main].classList.add('primary-selection')
+    this.mainSelection.classList.add('primary-selection')
     for (const [index, element] of this.collection.entries()) {
       if (index !== this.main) {
         element.classList.add('secondary-selection')
@@ -166,7 +169,7 @@ class SelectionList {
     if (this.length === 0) {
       return
     }
-    this.collection[this.main].classList.remove('primary-selection')
+    this.mainSelection.classList.remove('primary-selection')
     for (const [index, element] of this.collection.entries()) {
       if (index !== this.main) {
         element.classList.remove('secondary-selection')
