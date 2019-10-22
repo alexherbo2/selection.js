@@ -24,11 +24,12 @@ selections.previous() // Select the bug icon
 selections.remove() // Remove the element from the selections
 ```
 
-More examples at [Create a keyboard interface to the web].
+More examples at [Krabby].
 
 ## References
 
 - [Create a keyboard interface to the web]
 
 [Kakoune]: https://kakoune.org
+[Krabby]: https://github.com/alexherbo2/krabby
 [Create a keyboard interface to the web]: https://alexherbo2.github.io/blog/chrome/create-a-keyboard-interface-to-the-web/
