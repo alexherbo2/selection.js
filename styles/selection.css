@@ -15,3 +15,19 @@
 :root.primary-selection {
   margin: 2px !important;
 }
+
+.primary-phantom {
+  --primary-phantom-color: hsl(135, 94%, 65%); /* Green */
+  outline: var(--primary-phantom-color) solid thin !important;
+  border: thin solid var(--primary-phantom-color) !important;
+}
+
+.secondary-phantom {
+  --secondary-phantom-color: hsl(135, 94%, 65%); /* Green */
+  outline: var(--secondary-phantom-color) dotted thin !important;
+  border: thin dotted var(--secondary-phantom-color) !important;
+}
+
+:root.primary-phantom {
+  margin: 2px !important;
+}

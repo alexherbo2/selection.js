@@ -1,10 +1,14 @@
-class SelectionList {
+class SelectionListBase {
   constructor() {
     this.main = 0
     this.collection = []
     // Events
     this.events = {}
     this.events['selection-change'] = []
+    // Style
+    this.style = {}
+    this.style.primarySelection = undefined
+    this.style.secondarySelection = undefined
   }
   on(type, listener) {
     this.events[type].push(listener)
@@ -108,10 +112,10 @@ class SelectionList {
     }
     if (main !== this.main) {
       const secondary = this.mainSelection
-      secondary.classList.remove('primary-selection')
-      secondary.classList.add('secondary-selection')
-      element.classList.remove('secondary-selection')
-      element.classList.add('primary-selection')
+      secondary.classList.remove(this.style.primarySelection)
+      secondary.classList.add(this.style.secondarySelection)
+      element.classList.remove(this.style.secondarySelection)
+      element.classList.add(this.style.primarySelection)
       this.main = main
     }
     element.focus()
@@ -158,10 +162,10 @@ class SelectionList {
     if (this.length === 0) {
       return
     }
-    this.mainSelection.classList.add('primary-selection')
+    this.mainSelection.classList.add(this.style.primarySelection)
     for (const [index, element] of this.collection.entries()) {
       if (index !== this.main) {
-        element.classList.add('secondary-selection')
+        element.classList.add(this.style.secondarySelection)
       }
     }
   }
@@ -169,10 +173,10 @@ class SelectionList {
     if (this.length === 0) {
       return
     }
-    this.mainSelection.classList.remove('primary-selection')
+    this.mainSelection.classList.remove(this.style.primarySelection)
     for (const [index, element] of this.collection.entries()) {
       if (index !== this.main) {
-        element.classList.remove('secondary-selection')
+        element.classList.remove(this.style.secondarySelection)
       }
     }
     this.main = 0
@@ -190,5 +194,30 @@ class SelectionList {
   }
   static modulo(dividend, divisor) {
     return ((dividend % divisor) + divisor) % divisor
+  }
+}
+
+class SelectionList extends SelectionListBase {
+  constructor() {
+    super()
+    this.style.primarySelection = 'primary-selection'
+    this.style.secondarySelection = 'secondary-selection'
+    this.phantoms = new PhantomList
+  }
+  save() {
+    this.phantoms.add(...this.collection)
+    this.clear()
+  }
+  restore() {
+    this.add(...this.phantoms.collection)
+    this.phantoms.clear()
+  }
+}
+
+class PhantomList extends SelectionListBase {
+  constructor() {
+    super()
+    this.style.primarySelection = 'primary-phantom'
+    this.style.secondarySelection = 'secondary-phantom'
   }
 }
