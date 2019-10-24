@@ -209,7 +209,9 @@ class SelectionList extends SelectionListBase {
     this.clear()
   }
   restore() {
+    const main = this.mainSelection
     this.add(...this.phantoms.collection)
+    this.focus(main)
     this.phantoms.clear()
   }
 }
