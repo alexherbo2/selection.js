@@ -117,6 +117,7 @@ class SelectionListBase {
       element.classList.remove(this.style.secondarySelection)
       element.classList.add(this.style.primarySelection)
       this.main = main
+      this.triggerEvent('selection-change', this.collection)
     }
     element.focus()
     element.scrollIntoView({ block: 'nearest' })
