@@ -76,6 +76,18 @@ class SelectionListBase {
     this.fold((element) => element.children)
     this.children(depth - 1)
   }
+  nextSibling() {
+    this.fold((element) => [element.nextElementSibling])
+  }
+  previousSibling() {
+    this.fold((element) => [element.previousElementSibling])
+  }
+  firstChild() {
+    this.fold((element) => [element.firstElementChild])
+  }
+  lastChild() {
+    this.fold((element) => [element.lastElementChild])
+  }
   select(selectors = '*') {
     this.fold((element) => Array.from(element.querySelectorAll(selectors)))
   }
