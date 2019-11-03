@@ -219,7 +219,6 @@ class SelectionList extends SelectionListBase {
   }
   save() {
     this.phantoms.add(...this.collection)
-    this.clear()
   }
   restore() {
     const main = this.mainSelection
