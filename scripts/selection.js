@@ -135,7 +135,7 @@ class SelectionListBase {
     element.scrollIntoView({ block: 'nearest' })
   }
   next(count = 1) {
-    const main = SelectionList.modulo(this.main + count, this.length)
+    const main = SelectionListBase.modulo(this.main + count, this.length)
     this.focus(this.collection[main])
   }
   previous(count = 1) {
@@ -146,7 +146,7 @@ class SelectionListBase {
       return
     }
     const main = this.mainSelection
-    this.collection.sort(SelectionList.compare)
+    this.collection.sort(SelectionListBase.compare)
     this.main = this.collection.indexOf(main)
   }
   merge() {
