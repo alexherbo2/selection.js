@@ -21,7 +21,7 @@ selections.focus(getStarted) // Select “Getting Started”
 selections.next(2) // Select “Issue Tracker”
 selections.children() // Select all of the child elements
 selections.previous() // Select the bug icon
-selections.remove() // Remove the element from the selections
+selections.remove(selections.mainSelection) // Remove the main selection
 ```
 
 More examples at [Krabby].

@@ -50,8 +50,7 @@ class SelectionListBase {
     this.set(collection, main)
   }
   remove(...elements) {
-    const collection = Object.assign([this.mainSelection], elements)
-    this.filter((candidate) => collection.includes(candidate) === false)
+    this.filter((candidate) => elements.includes(candidate) === false)
   }
   filter(callback) {
     this.fold((element, index, array) => callback(element, index, array) ? [element] : [])
