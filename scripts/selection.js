@@ -45,11 +45,17 @@ class SelectionListBase {
     this.triggerEvent('selection-change', collection)
   }
   add(...elements) {
+    if (elements.length === 0) {
+      return
+    }
     const collection = this.collection.concat(elements)
     const main = collection.length - 1
     this.set(collection, main)
   }
   remove(...elements) {
+    if (elements.length === 0) {
+      return
+    }
     this.filter((candidate) => elements.includes(candidate) === false)
   }
   filter(callback) {
