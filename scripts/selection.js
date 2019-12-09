@@ -73,7 +73,7 @@ class SelectionListBase {
     }
     this.fold((element) => {
       const parent = getParent(element, count)
-      return parent ? [parent] : []
+      return [parent]
     })
   }
   children(depth = 1) {
@@ -102,7 +102,11 @@ class SelectionListBase {
     let main = this.main
     const collection = []
     for (const [index, element] of this.collection.entries()) {
-      const elements = callback(element, index, this.collection)
+      // Add a protection against selecting children or siblings when there aren’t any.
+      // Example: selections.fold((element) => [element.parentElement])
+      // Use Array.from() to handle HTML collections
+      // Example: selections.fold((element) => element.children)
+      const elements = Array.from(callback(element, index, this.collection)).filter(Boolean)
       switch (elements.length) {
         case 0:
           if (index < this.main || this.main === this.length - 1) {
