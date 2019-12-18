@@ -12,13 +12,11 @@
 }
 
 .primary-selection {
-  outline: var(--primary-selection-color) solid thin !important;
-  border: thin solid var(--primary-selection-color) !important;
+  outline: var(--primary-selection-color) solid 2px !important;
 }
 
 .secondary-selection {
-  outline: var(--secondary-selection-color) dotted thin !important;
-  border: thin dotted var(--secondary-selection-color) !important;
+  outline: var(--secondary-selection-color) dotted 2px !important;
 }
 
 :root.primary-selection {
@@ -26,13 +24,11 @@
 }
 
 .primary-phantom {
-  outline: var(--primary-phantom-color) solid thin !important;
-  border: thin solid var(--primary-phantom-color) !important;
+  outline: var(--primary-phantom-color) solid 2px !important;
 }
 
 .secondary-phantom {
-  outline: var(--secondary-phantom-color) dotted thin !important;
-  border: thin dotted var(--secondary-phantom-color) !important;
+  outline: var(--secondary-phantom-color) dotted 2px !important;
 }
 
 :root.primary-phantom {
@@ -41,11 +37,9 @@
 
 /* Overlapping selections (selections on phantoms) */
 .primary-selection.primary-phantom, .primary-selection.secondary-phantom {
-  outline: var(--primary-selection-color) solid thin !important;
-  border: thin solid var(--primary-selection-color) !important;
+  outline: var(--primary-selection-color) solid 2px !important;
 }
 
 .secondary-selection.primary-phantom, .secondary-selection.secondary-phantom {
-  outline: var(--secondary-selection-color) dotted thin !important;
-  border: thin dotted var(--secondary-selection-color) !important;
+  outline: var(--secondary-selection-color) dotted 2px !important;
 }
