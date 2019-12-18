@@ -1,10 +1,10 @@
 /* Dracula theme – https://draculatheme.com */
 
 :root {
-  --primary-selection-color: hsl(326, 100%, 74%); /* Pink */
-  --secondary-selection-color: hsl(265, 89%, 78%); /* Purple */
-  --primary-phantom-color: hsl(135, 94%, 65%); /* Green */
-  --secondary-phantom-color: hsl(135, 94%, 65%); /* Green */
+  --primary-selection-border: hsl(326, 100%, 74%); /* Pink */
+  --secondary-selection-border: hsl(265, 89%, 78%); /* Purple */
+  --primary-phantom-border: hsl(135, 94%, 65%); /* Green */
+  --secondary-phantom-border: hsl(135, 94%, 65%); /* Green */
 }
 
 .primary-selection, .secondary-selection, .primary-phantom, .secondary-phantom {
@@ -12,11 +12,11 @@
 }
 
 .primary-selection {
-  outline: var(--primary-selection-color) solid 2px !important;
+  outline: var(--primary-selection-border) solid 2px !important;
 }
 
 .secondary-selection {
-  outline: var(--secondary-selection-color) dotted 2px !important;
+  outline: var(--secondary-selection-border) dotted 2px !important;
 }
 
 :root.primary-selection {
@@ -24,11 +24,11 @@
 }
 
 .primary-phantom {
-  outline: var(--primary-phantom-color) solid 2px !important;
+  outline: var(--primary-phantom-border) solid 2px !important;
 }
 
 .secondary-phantom {
-  outline: var(--secondary-phantom-color) dotted 2px !important;
+  outline: var(--secondary-phantom-border) dotted 2px !important;
 }
 
 :root.primary-phantom {
@@ -37,9 +37,9 @@
 
 /* Overlapping selections (selections on phantoms) */
 .primary-selection.primary-phantom, .primary-selection.secondary-phantom {
-  outline: var(--primary-selection-color) solid 2px !important;
+  outline: var(--primary-selection-border) solid 2px !important;
 }
 
 .secondary-selection.primary-phantom, .secondary-selection.secondary-phantom {
-  outline: var(--secondary-selection-color) dotted 2px !important;
+  outline: var(--secondary-selection-border) dotted 2px !important;
 }
