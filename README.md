@@ -9,7 +9,7 @@ selection.js is a JavaScript library to manipulate multiple selections, inspired
 
 ## Installation
 
-Add [`selection.js`](scripts/selection.js) and [`selection.css`](styles/selection.css) to your project.
+Add [`selection.js`](src/selection.js) and [`selection.css`](src/selection.css) to your project.
 
 ## Usage
 
@@ -35,4 +35,4 @@ You can find some examples in [Krabby].
 
 [Krabby]: https://krabby.netlify.com
 
-See the [source](scripts/selection.js) for a complete reference.
+See the [source](src/selection.js) for a complete reference.
