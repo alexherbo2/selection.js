@@ -4,8 +4,8 @@ selection.js is a JavaScript library to manipulate multiple selections, inspired
 
 [Kakoune]: https://kakoune.org
 
-[![selection.js](https://img.youtube.com/vi_webp/KIsOSIQXAVU/maxresdefault.webp)](https://youtube.com/playlist?list=PLdr-HcjEDx_k12ybIzEREKrdQGqj48HTJ "YouTube – selection.js")
-[![YouTube Play Button](https://www.iconfinder.com/icons/317714/download/png/16)](https://youtube.com/playlist?list=PLdr-HcjEDx_k12ybIzEREKrdQGqj48HTJ) · [selection.js](https://youtube.com/playlist?list=PLdr-HcjEDx_k12ybIzEREKrdQGqj48HTJ)
+[![Thumbnail](https://img.youtube.com/vi_webp/KIsOSIQXAVU/maxresdefault.webp)](https://youtube.com/playlist?list=PLdr-HcjEDx_k12ybIzEREKrdQGqj48HTJ)
+[![Button](https://www.iconfinder.com/icons/317714/download/png/16)](https://youtube.com/playlist?list=PLdr-HcjEDx_k12ybIzEREKrdQGqj48HTJ)
 
 ## Installation
 
